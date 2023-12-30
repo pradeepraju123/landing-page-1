@@ -635,6 +635,7 @@
                                     <div class="col-md-8">
                                         <div class="form-group">
                                             <input type="hidden" name="modal" value="2">
+                                            <input type="hidden" class="form-control" name="source" value="Landing page 1">
                                             <input type="text" class="form-control" name="fullname" placeholder="Your Name"
                                                 required>
                                         </div>
@@ -702,18 +703,7 @@
                                         if (passwordValue.length < 7 || passwordValue.length > 16) {                              
                                     
                                         }else{
-                                            var button = document.getElementById("myButton");
-                                    var buttonTwo =document.getElementById("buttonTwo");
-                                    button.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Loading...';
-                                    button.style.display="initial";
-                                    buttonTwo.style.display="none";
-                                    
                                     // do some processing here, like an API call or form submission
-                                    
-                                    // after processing is complete, reset the button text
-                                    setTimeout(function() {
-                                        button.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Loading...';
-                                    }, 5000); // wait for 3 seconds before resetting button text
                                         }
 
                                 }
@@ -739,6 +729,7 @@
                                 <div class="col-md-12 mt-3">
                                     <div class="form-group">
                                         <input type="hidden" name="modal" value="1">
+                                        <input type="hidden" class="form-control" name="sourcenew" value="Landing page 1">
                                         <input type="text" class="form-control" name="fullnamenew" placeholder="Your Name"
                                             required>
                                     </div>
@@ -939,6 +930,7 @@
       const country_code = document.querySelector('[name="country_code"]').value;
       const phone = document.querySelector('[name="phone"]').value;
       const courses = document.querySelector('[name="courses"]').value;
+      const source = document.querySelector('[name="source"]').value;
   
       // Combine country code and phone number
       const fullPhoneNumber = `${country_code}${phone}`;
@@ -948,11 +940,11 @@
         fullname,
         email,
         phone: fullPhoneNumber,
-        courses,
+        source,
       };
   
       // Replace 'https://your-api-endpoint.com/save-data' with the actual API endpoint
-      const apiEndpoint = 'http://localhost:8080/api/v1/contact';
+      const apiEndpoint = 'https://api.inferconautomation.online/api/v1/contact';
   
       // Send data to the API using Fetch
       fetch(apiEndpoint, {
@@ -987,6 +979,7 @@
       const country_code = document.querySelector('[name="country_code_new"]').value;
       const phone = document.querySelector('[name="phonenew"]').value;
       const courses = document.querySelector('[name="coursesnew"]').value;
+      const source = document.querySelector('[name="sourcenew"]').value;
   
       // Combine country code and phone number
       const fullPhoneNumber = `${country_code}${phone}`;
@@ -997,10 +990,11 @@
         email,
         phone: fullPhoneNumber,
         courses,
+        source
       };
   
       // Replace 'https://your-api-endpoint.com/save-data' with the actual API endpoint
-      const apiEndpoint = 'http://localhost:8080/api/v1/contact';
+      const apiEndpoint = 'https://api.inferconautomation.online/api/v1/contact';
   
       // Send data to the API using Fetch
       fetch(apiEndpoint, {
