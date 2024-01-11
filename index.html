@@ -36,14 +36,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-P3967D6X');</script>
 <!-- End Google Tag Manager -->
-
-
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3967D6X"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
     <style>
         
         
@@ -76,30 +68,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 }
     </style>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10981567349"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-10981567349');
-</script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-554H3ST');</script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10981567349"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-10981567349');
-</script>
-    <!-- End Google Tag Manager -->
 </head>
 
 <body>
@@ -110,10 +78,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="loader-box-2"></div>
         </div>
     </div> -->
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-554H3ST"
+   <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3967D6X"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    
     <header class="header">
         <div class="main-navigation">
             <nav class="navbar navbar-expand-lg">
@@ -712,7 +681,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                  <button type="button"  id="myButton"  style="display:none;" class="theme-btn">Enquire
                                     Now <i class="far fa-paper-plane"></i>
                                 </button>
-                                <button type="submit" name="submit" id="buttonTwo" onclick="alertFunction()" class="theme-btn">Enquire
+                                <button type="submit" name="submit" id="buttonTwo" class="theme-btn">Enquire
                                     Now <i class="far fa-paper-plane"></i>
                                 </button>
                                 
@@ -994,20 +963,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           return response.json();
         })
         .then((data) => {
-    console.log('API Response:', data);
+    console.log('API Response:', data);    
+    window.location.replace("thank-you.html");
     
-    // Show confirmation dialog
-    alertify.confirm('Confirmation', 'Details are correct, do you want to continue with existing details?', 
-        function(){
-            // If 'Ok' is clicked, redirect to another page
-            alertify.success('Ok');
-            window.location.replace("thank-you.html");
-        },
-        function(){
-            // If 'Cancel' is clicked, show an error message or perform other actions if needed
-            alertify.error('Cancel');
-        }
-    );
 })
 .catch((error) => {
     console.error('Error submitting form:', error);
@@ -1058,19 +1016,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         })
         .then((data) => {
         console.log('API Response:', data);
-        
-        // Show confirmation dialog
-        alertify.confirm('Confirmation', 'Details are correct, do you want to continue with existing details?', 
-            function(){
-                // If 'Ok' is clicked, redirect to another page
-                alertify.success('Ok');
-                window.location.replace("thank-you.html");
-            },
-            function(){
-                // If 'Cancel' is clicked, show an error message or perform other actions if needed
-                alertify.error('Cancel');
-            }
-        );
+        window.location.replace("thank-you.html");
+       
     })
     .catch((error) => {
         console.error('Error submitting form:', error);
