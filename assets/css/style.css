@@ -17,7 +17,7 @@ body {
  box-sizing: border-box;
 }
 body {
- font-family: roboto, sans-serif;
+ /* font-family: roboto, sans-serif; */
  font-style: normal;
  font-size: 16px;
  font-weight: 400;
@@ -59,7 +59,6 @@ h6 {
  color: #1f2471;
  margin: 0;
  font-weight: 600;
- font-family: barlow, sans-serif;
  line-height: 1.2;
 }
 h1 {
@@ -1353,7 +1352,7 @@ button.navbar-toggler:focus {
 .choose-content li {
  display: block;
  margin-bottom: 20px;
- padding: 15px;
+ padding: 3px;
  cursor: pointer;
  padding-left: 40px;
  position: relative;
@@ -2475,7 +2474,8 @@ button.navbar-toggler:focus {
  margin-right: 5px;
 }
 .pricing-footer {
- padding-bottom: 30px;
+    padding-top: 20px;
+ padding-bottom: 20px;
 }
 @media all and (max-width: 992px) {
  .pricing-amount strong {
